@@ -1,0 +1,14 @@
+name: Hello CI
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting, date, and commit hash
+        run: |
+          echo "Hello from CI!"
+          echo "Current date: $(date)"
+          echo "Commit hash: ${{ github.sha }}"
